@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "LinkedIn Notification Deleter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Removes notifications from the LinkedIn notifications page.",
   "icons": {
     "16": "assets/icons/icon-16.png",
@@ -11,10 +11,16 @@
   },
   "action": {
     "default_title": "LinkedIn Notification Deleter",
-    "default_icon": "assets/icons/icon.png"
+    "default_icon": {
+      "16": "assets/icons/icon-16.png",
+      "32": "assets/icons/icon-32.png",
+      "48": "assets/icons/icon-48.png",
+      "128": "assets/icons/icon-128.png"
+    }
   },
   "background": {
-    "scripts": ["background.js"]
+    "service_worker": "background.js",
+    "type": "module"
   },
   "browser_specific_settings": {
     "gecko": {
